@@ -272,9 +272,6 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>${jib-maven-plugin.version}</version>
                 <configuration>
-                    <from>
-                        <image>adoptopenjdk:21-jre-hotspot</image>
-                    </from>
                     <container>
                         <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
                         <entrypoint>INHERIT</entrypoint>

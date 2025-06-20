@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: whoami
+  name: adminBoilerplate
   namespace: "erikmekiassen"
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: whoami
+      app: adminBoilerplate
   template:
     metadata:
       labels:
-        app: whoami
+        app: adminBoilerplate
     spec:
       containers:
-        - name: whoami
-          image: ghcr.io/traefik/whoami:latest
+        - name: adminBoilerplate
+          image: registry.hub.docker.com/emvit/admin-boilerplate:latest
           ports:
             - name: http
               containerPort: 8080

@@ -5,7 +5,7 @@ help:		## Viser denne hjelpeteksten
 build: ## bygger target/ mappen på nytt
 	@mvn clean install -DskipTests
 run:		## Bygger og kjører containeren
-	@mvn jib:dockerBuild -Dimage=admin-web -Dgit.commit.id=local -Dgit.branch=main -Dgit.commit.message.full="Local build" && docker run -it -d -p8080:8080 --name admin-web admin-web:latest || true
+	@mvn jib:dockerBuild && docker run -it -d -p8080:8080 --name admin-web admin-web:latest || true
 
 clean-build-run: ## bygger og kjører på nytt
 	@make clean && make build && make run

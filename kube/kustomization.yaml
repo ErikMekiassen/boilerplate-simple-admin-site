@@ -12,4 +12,4 @@ configMapGenerator:
   - name: whoami-config
     namespace: "erikmekiassen"
     literals:
-      - WHOAMI_PORT_NUMBER=8080
+      - ADMIN_BOILERPLATE_PORT_NUMBER=8080

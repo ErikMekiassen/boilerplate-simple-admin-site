@@ -1,0 +1,15 @@
+# kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: "ErikMekiassen"
+
+resources:
+  - deployment.yaml
+  - service.yaml
+  - http-route.yaml
+
+configMapGenerator:
+  - name: whoami-config
+    namespace: "ErikMekiassen"
+    literals:
+      - WHOAMI_PORT_NUMBER=8080

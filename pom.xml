@@ -267,6 +267,27 @@
                     </pluginOptions>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>${jib-maven-plugin.version}</version>
+                <configuration>
+                    <from>
+                        <image>adoptopenjdk:21-jre-hotspot</image>
+                    </from>
+                    <container>
+                        <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
+                        <entrypoint>INHERIT</entrypoint>
+                        <labels>
+                        </labels>
+                        <environment>
+                            <APPCMD>java -cp @/app/jib-classpath-file @/app/jib-main-class-file</APPCMD>
+                            <JAVA_TOOL_OPTIONS>-XX:MaxRAMPercentage=75</JAVA_TOOL_OPTIONS>
+                            <NO_SPK_CONFIG>true</NO_SPK_CONFIG>
+                        </environment>
+                    </container>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: net.mekiassen.boilerplate.web.BoilerplateWebAppTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.332 s -- in net.mekiassen.boilerplate.web.BoilerplateWebAppTest
